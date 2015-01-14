@@ -1,0 +1,10 @@
+/*style.css*/
+
+.page 
+{
+	display: none;
+}
+#home.page
+{
+	display: block;
+} 

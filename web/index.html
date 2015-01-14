@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta charset="utf-8">
-<link href="css/bootstrap.css" rel="stylesheet">
-<script src="js/bootstrap.js"> </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta charset="utf-8">
+
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+
+	<script src="js/jquery-2.1.3.js"></script>	
+	<script src="js/bootstrap.js"> </script>
+	<script src="js/qrmedia.js"> </script>
+
 
 </head>
 <body>
 
-<a href="#video" class="btn btn-block btn-lg btn-success">Video</a>
-<a href="#audio" class="btn btn-block btn-lg btn-primary">Audio</a>
+<section id="home" class="page">
+	<a href="#video" id="video_btn" class="btn btn-block btn-lg btn-success">Video</a>
+	<a href="#audio" id="audio_btn"class="btn btn-block btn-lg btn-primary">Audio</a>
+</section>
+
+<section id="record_audio" class="page">
+	<form>
+		<p>Capture Audio: <input type="file" accept="audio/*" id="capture" capture="microphone"> 
+		<button id="save_audio" class="btn btn-success">Save</button>
+	</form>
+</section>
+
+<section id="record_video" class="page">
+	<form>
+		<p>Capture Video: <input type="file" accept="video/*" id="capture" capture="camcorder"> 
+		<button id="save_video" class="btn btn-success">Save</button>
+	</form>
+</section>
 
 
 </body>
