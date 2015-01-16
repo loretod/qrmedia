@@ -8,3 +8,19 @@
 {
 	display: block;
 } 
+
+body { 
+    background: #D7F79C;
+}
+
+
+img{
+    padding-bottom: 10px;
+}
+
+li
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
