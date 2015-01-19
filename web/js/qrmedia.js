@@ -2,9 +2,15 @@
 
 function signIn()
 {
-	$("#login form").hide();
+	$("#loginform").hide();
 	showPage("#home");
 	console.log('Sign in was successful now record!');
+}
+
+function signUp()
+{
+	showPage("#home");
+	console.log("Log in credentials saved in database");
 }
 
 
@@ -32,7 +38,7 @@ function previewAudio()
 	//create a link/qrcode to it
 	//upload that to cloud
 	showPage("#preview");
-	saveMedia("audio")
+	saveMedia("audio");
 }
 
 function previewVideo()
@@ -40,7 +46,14 @@ function previewVideo()
 	//create a link/qrcode to it
 	//upload that to cloud
 	showPage("#preview");
-	saveMedia("video")
+	saveMedia("video");
+	
+}
+
+function nameFile()
+{
+	showPage("#QRpage");
+	console.log("your file was named and saved");
 }
 
 function print()
@@ -51,6 +64,7 @@ function print()
 
 $( document ).ready(function() {
 	$("#login").click(function(e){ signIn(); });
+	$("#signUp").click(function(e){ signUp(); });
 
 	$("#video_btn").click(function(e){ showPage("#record_video"); });
 	$("#audio_btn").click(function(e){ showPage("#record_audio"); });
@@ -59,7 +73,7 @@ $( document ).ready(function() {
 	$("#save_video").click( function(e){ previewVideo(); });
 	$("#save_audio").click( function(e){ previewAudio(); }); 
 
-	$("#makecode").click(function(e){ showPage("#QRpage"); });
+	$("#makecode").click(function(e){ nameFile(); });
 
 	$("#makeanother").click(function(e){ showPage("#home"); });
 	$("#print").click(function(e){ print(); });

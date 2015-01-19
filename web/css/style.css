@@ -5,21 +5,42 @@
 	display: none;
 }
 
-.loginform cf 
+#loginform 
 {
     display: block;
+    margin-top: 20px;
 } 
 
 body { 
-    margin-left: auto;
+    margin-left: 25px;
     margin-right: auto;
-    width: 90%;
     background: #D7F79C;
+    border-left: 3px;
+    border-left-style: solid;
+    padding-left: 10px;
+    border-color: #5CB85C;
 }
 
+header{
+    display: flex;
+    background-color: #5CB85C;
+    top: 0px;
+    right: 0px;
+}
+
+blockquote {
+    font-style: italic;
+    color: #5CB85C;
+    font-size: 1em;
+}
+
+.navbar-dropdown{
+    float: right;
+    padding-right: 50px;
+}
 
 img{
-    padding-bottom: 10px;
+    padding-right: 20px;
 }
 
 li

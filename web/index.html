@@ -15,33 +15,17 @@
 
 </head>
 <body>
+<header> 
+    <img src="images/qr_icon.gif"/>
+    <h1>QR Media</h1>
+</header>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>QR Media</a>
-    </div>
-
-    <div class="navbar-dropdown" 
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Settings <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </li>
-    </div>
-</nav>
-
-
+<blockquote>Show the world what your students really know!</blockquote>
 <!-- Log In -->
-<section class="loginform cf" id="login form">  
+<section class="loginform cf" id="loginform">  
 <form name="login" action="index_submit" method="get" accept-charset="utf-8">  
-    <ul>  
+    <ul>
+        <li><h3>Sign In</li>
         <li><label for="usermail">Email</label>  
         <input type="email" name="usermail" placeholder="yourname@email.com" required></li>  
         <li><label for="password">Password</label>  
@@ -82,7 +66,7 @@
 
                 <li>  
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-success" data-target="#home" >Sign Up</button>
+                <button type="button" id="signUp" class="btn btn-success" data-target="#home" >Sign Up</button>
             </ul>  
           </form>  
         </section> 
@@ -100,7 +84,8 @@
 <!-- Record Audio -->
 <section id="record_audio" class="page">
 	<form>
-		<h3>Capture Audio<input type="file" accept="audio/*" id="capture" capture="microphone"> 
+		<h3>Capture Audio<input type="file" accept="audio/*" id="capture" capture="microphone">
+        <br>
         <button type="button" class="btn btn-success" id="save_audio">Preview</button>
 	</form>
 </section>
@@ -108,7 +93,8 @@
 <!-- Record Video -->
 <section id="record_video" class="page">
 	<form>
-		<h3>Capture Video<input type="file" accept="video/*" id="capture" capture="camcorder"> 
+		<h3>Capture Video<input type="file" accept="video/*" id="capture" capture="camcorder">
+        <br>
         <button type="button" class="btn btn-success" id="save_video">Preview</button>
 	</form>
 </section>
@@ -116,17 +102,20 @@
 <!-- Preview Media -->
 <section id="preview" class="page">
     <p>This is the preview page</p>
-    <button type="button" class="btn btn-success" id="makecode" data-target="#QRpage" >Make the Code</button>
+    <label for="savefile">Save file as: </label>  
+        <input type="text" name="filename" required>
+    <br>
+    <button type="button" class="btn btn-success" id="makecode" data-target="#QRpage" >Save</button>
 </section>
 
 <!-- Generate QR Code -->
 <section id="QRpage" class="page">
     <img src="images/qrcode.gif">
+    <br>
+    <br>
     <button type="button" class="btn btn-success" id="print">Print</button>
     <button type="button" class="btn btn-success" id="makeanother" data-target="#home">Make Another</button>
 </section>
 
-
 </body>
-
 </html>
